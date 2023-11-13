@@ -47,7 +47,7 @@ jobs:
   build-test-app-and-frameworks:
     name: Build Test App and Frameworks
     runs-on: macos-13
-    if: ${{ github.event_name != 'push' }}
+    if: ${{ github.event_name != 'push' && github.event.inputs.snapshots != 'true' }}
     steps:
     - uses: actions/checkout@v3.1.0
     - uses: ./.github/actions/ruby-cache
