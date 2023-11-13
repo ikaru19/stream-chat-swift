@@ -112,10 +112,6 @@ jobs:
     if: ${{ github.event_name != 'push' }}
     steps:
     - uses: actions/checkout@v3.1.0
-    - uses: actions/download-artifact@v3
-      with:
-        name: cache-derived-data
-        path: derived_data/Build/
     - uses: ./.github/actions/bootstrap
     - name: Run UI Tests (Debug)
       run: bundle exec fastlane test_ui device:"${{ env.IOS_SIMULATOR_DEVICE }}" record:${{ github.event.inputs.snapshots }}
