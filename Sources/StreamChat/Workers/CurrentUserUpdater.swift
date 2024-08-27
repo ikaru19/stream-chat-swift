@@ -21,7 +21,7 @@ class CurrentUserUpdater: Worker {
     func updateUserData(
         currentUserId: UserId,
         name: String?,
-        imageURL: URL?,
+        imageURL: String?,
         privacySettings: UserPrivacySettings?,
         role: UserRole?,
         userExtraData: [String: RawJSON]?,
@@ -251,7 +251,7 @@ extension CurrentUserUpdater {
     func updateUserData(
         currentUserId: UserId,
         name: String?,
-        imageURL: URL?,
+        imageURL: String?,
         privacySettings: UserPrivacySettings?,
         role: UserRole?,
         userExtraData: [String: RawJSON]?

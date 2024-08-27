@@ -166,7 +166,7 @@ public extension CurrentChatUserController {
     ///   - completion: Called when user is successfuly updated, or with error.
     func updateUserData(
         name: String? = nil,
-        imageURL: URL? = nil,
+        imageURL: String? = nil,
         privacySettings: UserPrivacySettings? = nil,
         role: UserRole? = nil,
         userExtraData: [String: RawJSON] = [:],

@@ -164,14 +164,14 @@ struct CurrentUserUpdateResponse: Decodable {
 /// An object describing the outgoing user JSON payload.
 struct UserUpdateRequestBody: Encodable {
     let name: String?
-    let imageURL: URL?
+    let imageURL: String?
     let privacySettings: UserPrivacySettingsPayload?
     let role: UserRole?
     let extraData: [String: RawJSON]?
 
     init(
         name: String?,
-        imageURL: URL?,
+        imageURL: String?,
         privacySettings: UserPrivacySettingsPayload?,
         role: UserRole?,
         extraData: [String: RawJSON]?

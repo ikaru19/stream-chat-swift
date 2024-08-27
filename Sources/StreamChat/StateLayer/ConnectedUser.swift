@@ -50,7 +50,7 @@ public final class ConnectedUser {
     /// - Throws: An error while communicating with the Stream API or when user is not logged in.
     public func update(
         name: String? = nil,
-        imageURL: URL? = nil,
+        imageURL: String? = nil,
         privacySettings: UserPrivacySettings? = nil,
         role: UserRole? = nil,
         extraData: [String: RawJSON] = [:]
